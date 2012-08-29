@@ -37,19 +37,16 @@
     return self;
 }
 
-- (void)viewDidLoad
+-(void)uploadImage
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"image2" ofType:@"png"];
     NSURL *url = [NSURL fileURLWithPath:path];
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *image = [UIImage imageWithData:data];
- 
+    
     imageView.image = image;
     CALayer *layer = imageView.layer;
-    layer.rasterizationScale = 1;
+    layer.rasterizationScale = rasterizationSlider.value;
     layer.shouldRasterize = YES;
     
     UIImage *scaled1 = [image scaleByFactor:2];
@@ -58,7 +55,23 @@
     UIImage *blurred2 = [scaled2 gaussianBlurWithBias:5];
     
     imageView.image = blurred2;
+    
+    [self.view setNeedsDisplay];
+}
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+    
+    rasterizationSlider.value = 0.2;
+    rasterizationLabel.text = [NSNumber numberWithFloat:rasterizationSlider.value].description;
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self uploadImage];
 }
 
 - (void)viewDidUnload
@@ -82,6 +95,10 @@
 }
 
 - (IBAction)rasterizationAction:(id)sender {
+    UISlider *slider = sender;
+    rasterizationLabel.text = [NSNumber numberWithFloat:slider.value].description;
+    
+    [self uploadImage];
 }
 - (IBAction)scaledAction:(id)sender {
 }

@@ -15,93 +15,97 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="CR6-J4-V7b">
-                                <rect key="frame" x="43" y="112" width="682" height="528"/>
+                                <rect key="frame" x="20" y="285" width="641" height="443"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="BeD-Q4-qgg">
-                                <rect key="frame" x="749" y="248" width="249" height="23"/>
+                                <rect key="frame" x="714" y="393" width="249" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="rasterizationAction:" destination="eHO-il-vot" eventType="valueChanged" id="5qR-og-JDl"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rasterization Scale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="ytT-u4-DTL">
-                                <rect key="frame" x="751" y="219" width="165" height="21"/>
+                                <rect key="frame" x="716" y="364" width="165" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="NcZ-Ld-raS">
-                                <rect key="frame" x="940" y="219" width="56" height="21"/>
+                                <rect key="frame" x="905" y="364" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.17647059261798859" green="0.37254902720451355" blue="0.68235296010971069" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="sN1-ha-vh5">
-                                <rect key="frame" x="749" y="330" width="249" height="23"/>
+                                <rect key="frame" x="714" y="475" width="249" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="scaledAction:" destination="eHO-il-vot" eventType="valueChanged" id="Q4d-7Q-iKd"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Scale Effect" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="nZa-tG-O7W">
-                                <rect key="frame" x="751" y="300" width="165" height="21"/>
+                                <rect key="frame" x="716" y="445" width="165" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="242-6V-s73">
-                                <rect key="frame" x="940" y="300" width="56" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="N/A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="242-6V-s73">
+                                <rect key="frame" x="905" y="445" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.1764705926" green="0.37254902719999999" blue="0.68235296010000002" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="BY5-j4-fRw">
-                                <rect key="frame" x="749" y="409" width="249" height="23"/>
+                                <rect key="frame" x="714" y="554" width="249" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="blur1Action:" destination="eHO-il-vot" eventType="valueChanged" id="Bh1-AV-3ov"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="First Blur" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="D45-rn-sfI">
-                                <rect key="frame" x="751" y="378" width="165" height="21"/>
+                                <rect key="frame" x="716" y="523" width="165" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="SEb-DJ-Kgi">
-                                <rect key="frame" x="940" y="378" width="56" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="N/A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="SEb-DJ-Kgi">
+                                <rect key="frame" x="905" y="523" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.1764705926" green="0.37254902719999999" blue="0.68235296010000002" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="thE-mo-Azr">
-                                <rect key="frame" x="749" y="495" width="249" height="23"/>
+                                <rect key="frame" x="714" y="640" width="249" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="blur2Action:" destination="eHO-il-vot" eventType="valueChanged" id="IdH-KW-kgf"/>
+                                    <action selector="blur2Action:" destination="eHO-il-vot" eventType="valueChanged" id="4Ab-xO-t7l"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Second Blur" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jC2-dQ-tvi">
-                                <rect key="frame" x="751" y="464" width="165" height="21"/>
+                                <rect key="frame" x="716" y="609" width="165" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="0sz-kf-bmJ">
-                                <rect key="frame" x="940" y="464" width="56" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="N/A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="0sz-kf-bmJ">
+                                <rect key="frame" x="905" y="609" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.1764705926" green="0.37254902719999999" blue="0.68235296010000002" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="image2.png" id="xHm-3J-1l6">
+                                <rect key="frame" x="166" y="20" width="348" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -110,9 +114,7 @@
                     <connections>
                         <outlet property="blur1Label" destination="SEb-DJ-Kgi" id="148-CF-9yd"/>
                         <outlet property="blur1Slider" destination="BY5-j4-fRw" id="7wI-G2-a8R"/>
-                        <outlet property="blur2Action" destination="45C-tq-O1H" id="csO-fr-vCl"/>
                         <outlet property="blur2Label" destination="0sz-kf-bmJ" id="lgh-Wb-yk6"/>
-                        <outlet property="blur2Slider" destination="thE-mo-Azr" id="MJQ-dU-aR7"/>
                         <outlet property="imageView" destination="CR6-J4-V7b" id="Ks8-kZ-9ho"/>
                         <outlet property="rasterizationLabel" destination="NcZ-Ld-raS" id="Uy3-6l-duB"/>
                         <outlet property="rasterizationSlider" destination="BeD-Q4-qgg" id="vlW-gr-KFg"/>
@@ -124,6 +126,9 @@
             <point key="canvasLocation" x="429" y="-1401"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image2.png" width="341" height="264"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
