@@ -124,25 +124,6 @@
             <point key="canvasLocation" x="429" y="-1401"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="iDTViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iDTViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="blur1Action:"/>
-                <relationship kind="action" name="rasterizationAction:"/>
-                <relationship kind="action" name="scaledAction:"/>
-                <relationship kind="outlet" name="blur1Label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="blur1Slider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="blur2Label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="blur2Slider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="rasterizationLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="rasterizationSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="scaleLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="scaleSlider" candidateClass="UISlider"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
