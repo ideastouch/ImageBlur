@@ -32,7 +32,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="NcZ-Ld-raS">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="N/A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="NcZ-Ld-raS">
                                 <rect key="frame" x="905" y="364" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -43,10 +43,10 @@
                                 <rect key="frame" x="714" y="475" width="249" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="scaledAction:" destination="eHO-il-vot" eventType="valueChanged" id="Q4d-7Q-iKd"/>
+                                    <action selector="blurBiasAction:" destination="eHO-il-vot" eventType="valueChanged" id="QLY-Zg-VXa"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Scale Effect" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="nZa-tG-O7W">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gaussian Blur Bias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="nZa-tG-O7W">
                                 <rect key="frame" x="716" y="445" width="165" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -64,10 +64,10 @@
                                 <rect key="frame" x="714" y="554" width="249" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="blur1Action:" destination="eHO-il-vot" eventType="valueChanged" id="Bh1-AV-3ov"/>
+                                    <action selector="blurTimeAction:" destination="eHO-il-vot" eventType="valueChanged" id="e9z-6v-oVn"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="First Blur" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="D45-rn-sfI">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gaussian Blur times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="D45-rn-sfI">
                                 <rect key="frame" x="716" y="523" width="165" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -76,27 +76,6 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="N/A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="SEb-DJ-Kgi">
                                 <rect key="frame" x="905" y="523" width="56" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.1764705926" green="0.37254902719999999" blue="0.68235296010000002" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="thE-mo-Azr">
-                                <rect key="frame" x="714" y="640" width="249" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="blur2Action:" destination="eHO-il-vot" eventType="valueChanged" id="4Ab-xO-t7l"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Second Blur" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="jC2-dQ-tvi">
-                                <rect key="frame" x="716" y="609" width="165" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="N/A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="0sz-kf-bmJ">
-                                <rect key="frame" x="905" y="609" width="56" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.1764705926" green="0.37254902719999999" blue="0.68235296010000002" alpha="1" colorSpace="deviceRGB"/>
@@ -112,14 +91,13 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="blur1Label" destination="SEb-DJ-Kgi" id="148-CF-9yd"/>
-                        <outlet property="blur1Slider" destination="BY5-j4-fRw" id="7wI-G2-a8R"/>
-                        <outlet property="blur2Label" destination="0sz-kf-bmJ" id="lgh-Wb-yk6"/>
+                        <outlet property="blurBiasLabel" destination="242-6V-s73" id="2oF-Fq-KfP"/>
+                        <outlet property="blurBiasSlider" destination="sN1-ha-vh5" id="TTH-3V-P7D"/>
+                        <outlet property="blurTimeLabel" destination="SEb-DJ-Kgi" id="gNv-6F-zDD"/>
+                        <outlet property="blurTimeSlide" destination="BY5-j4-fRw" id="ELp-3h-uxz"/>
                         <outlet property="imageView" destination="CR6-J4-V7b" id="Ks8-kZ-9ho"/>
                         <outlet property="rasterizationLabel" destination="NcZ-Ld-raS" id="Uy3-6l-duB"/>
                         <outlet property="rasterizationSlider" destination="BeD-Q4-qgg" id="vlW-gr-KFg"/>
-                        <outlet property="scaleLabel" destination="242-6V-s73" id="e09-gQ-vXp"/>
-                        <outlet property="scaleSlider" destination="sN1-ha-vh5" id="SYv-lF-utX"/>
                     </connections>
                 </viewController>
             </objects>

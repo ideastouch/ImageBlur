@@ -16,18 +16,13 @@
 @property (strong, nonatomic) IBOutlet UISlider *rasterizationSlider;
 - (IBAction)rasterizationAction:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *blurBiasLabel;
+@property (strong, nonatomic) IBOutlet UISlider *blurBiasSlider;
+- (IBAction)blurBiasAction:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UILabel *scaleLabel;
-@property (strong, nonatomic) IBOutlet UISlider *scaleSlider;
-- (IBAction)scaledAction:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UILabel *blur1Label;
-@property (strong, nonatomic) IBOutlet UISlider *blur1Slider;
-- (IBAction)blur1Action:(id)sender;
-
-@property (strong, nonatomic) IBOutlet UILabel *blur2Label;
-@property (strong, nonatomic) IBOutlet UISlider *blur2Slider;
-- (IBAction)blur2Action:(id)sender;
-
+@property (strong, nonatomic) IBOutlet UILabel *blurTimeLabel;
+@property (strong, nonatomic) IBOutlet UISlider *blurTimeSlide;
+- (IBAction)blurTimeAction:(id)sender;
 
 @end

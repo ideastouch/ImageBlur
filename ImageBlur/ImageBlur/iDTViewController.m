@@ -18,15 +18,13 @@
 @end
 
 @implementation iDTViewController
+@synthesize blurTimeLabel;
+@synthesize blurTimeSlide;
+@synthesize blurBiasLabel;
+@synthesize blurBiasSlider;
 @synthesize imageView;
 @synthesize rasterizationLabel;
 @synthesize rasterizationSlider;
-@synthesize scaleLabel;
-@synthesize scaleSlider;
-@synthesize blur1Label;
-@synthesize blur1Slider;
-@synthesize blur2Label;
-@synthesize blur2Slider;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,12 +47,12 @@
     layer.rasterizationScale = rasterizationSlider.value;
     layer.shouldRasterize = YES;
     
-    UIImage *scaled1 = [image scaleByFactor:2];
-    UIImage *blurred1 = [scaled1 gaussianBlurWithBias:5];
-    UIImage *scaled2 = [blurred1 scaleByFactor:0.5f];
-    UIImage *blurred2 = [scaled2 gaussianBlurWithBias:5];
     
-    imageView.image = blurred2;
+    int loop = 20.01 * blurTimeSlide.value;
+    int bias = 5.01 * blurBiasSlider.value;
+    for (int i=0; i<loop; i++) {
+        imageView.image = [imageView.image gaussianBlurWithBias:bias];
+    }
     
     [self.view setNeedsDisplay];
 }
@@ -63,10 +61,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    int value;
     
     rasterizationSlider.value = 0.2;
     rasterizationLabel.text = [NSNumber numberWithFloat:rasterizationSlider.value].description;
-
+    
+    blurBiasSlider.value = 1.f;
+    value = blurBiasSlider.value * 5.01;
+    blurBiasLabel.text = [NSNumber numberWithFloat:value].description;
+    
+    blurTimeSlide.value = 0.5f;
+    value = blurTimeSlide.value * 20.01;
+    blurTimeLabel.text = [NSNumber numberWithFloat:value].description;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -79,12 +85,10 @@
     [self setImageView:nil];
     [self setRasterizationLabel:nil];
     [self setRasterizationSlider:nil];
-    [self setScaleLabel:nil];
-    [self setScaleSlider:nil];
-    [self setBlur1Label:nil];
-    [self setBlur1Slider:nil];
-    [self setBlur2Label:nil];
-    [self setBlur2Slider:nil];
+    [self setBlurBiasLabel:nil];
+    [self setBlurBiasSlider:nil];
+    [self setBlurTimeLabel:nil];
+    [self setBlurTimeSlide:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -100,10 +104,18 @@
     
     [self uploadImage];
 }
-- (IBAction)scaledAction:(id)sender {
+- (IBAction)blurBiasAction:(id)sender {
+    UISlider *slider = sender;
+    int value = 5.01 * slider.value;
+    blurBiasLabel.text = [NSNumber numberWithFloat:value].description;
+    
+    [self uploadImage];
 }
-- (IBAction)blur1Action:(id)sender {
-}
-- (IBAction)blur2Action:(id)sender {
+- (IBAction)blurTimeAction:(id)sender {
+    UISlider *slider = sender;
+    int value = 20.01 * slider.value;
+    blurTimeLabel.text = [NSNumber numberWithFloat:value].description;
+    
+    [self uploadImage];
 }
 @end
