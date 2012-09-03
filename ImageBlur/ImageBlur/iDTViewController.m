@@ -22,6 +22,7 @@
 @synthesize blurTimeSlide;
 @synthesize blurBiasLabel;
 @synthesize blurBiasSlider;
+@synthesize labelView;
 @synthesize imageView;
 @synthesize rasterizationLabel;
 @synthesize rasterizationSlider;
@@ -42,6 +43,11 @@
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *image = [UIImage imageWithData:data];
     
+
+    CALayer *labelLayer = labelView.layer;
+    labelLayer.rasterizationScale = rasterizationSlider.value;
+    labelLayer.shouldRasterize = YES;
+    
     imageView.image = image;
     CALayer *layer = imageView.layer;
     layer.rasterizationScale = rasterizationSlider.value;
@@ -51,6 +57,7 @@
     int loop = 20.01 * blurTimeSlide.value;
     int bias = 5.01 * blurBiasSlider.value;
     for (int i=0; i<loop; i++) {
+        //labelView.image = [labelView.image gaussianBlurWithBias:bias];
         imageView.image = [imageView.image gaussianBlurWithBias:bias];
     }
     
@@ -89,6 +96,7 @@
     [self setBlurBiasSlider:nil];
     [self setBlurTimeLabel:nil];
     [self setBlurTimeSlide:nil];
+    [self setLabelView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

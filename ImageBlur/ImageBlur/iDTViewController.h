@@ -10,6 +10,7 @@
 
 @interface iDTViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *labelView;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @property (strong, nonatomic) IBOutlet UILabel *rasterizationLabel;
